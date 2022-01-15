@@ -4,9 +4,9 @@ let subContainer;
 let numberOfSubContainers=16;
 var mouseDown=0;
 var eraser=false;
+var rainbowSelected=false;
 
 // The event below checks for a click on parent div if clicked fill else don't
-
 parentContainer.addEventListener('mousedown',function(){
     if(mouseDown){
         mouseDown=0;
