@@ -1,16 +1,22 @@
-let parentContainer = document.getElementById('parentContainer');
+const parentContainer = document.getElementById('parentContainer');
+const etchingStatus=document.getElementById('status');
 let subContainer;
 let numberOfSubContainers=16;
 var mouseDown=0;
 var eraser=false;
 
 // The event below checks for a click on parent div if clicked fill else don't
+
 parentContainer.addEventListener('mousedown',function(){
     if(mouseDown){
         mouseDown=0;
-        return;
+        parentContainer.style.cssText="border: 2px solid grey";
+        
+    }else{
+        mouseDown=1;
+        // parentContainer.style.cssText="border: 10px solid green";
+        parentContainer.style.cssText="box-shadow: 0 0 20px rgb(79, 193, 228)";
     }
-    mouseDown=1;
 });
 
 drawEtchBoard();
